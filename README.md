@@ -1,16 +1,34 @@
-# React + Vite
+# User Directory Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application that fetches and displays users from the [JSONPlaceholder API](https://jsonplaceholder.typicode.com/users).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Dashboard table** — lists all users with Name, Email, Phone, and Company columns
+- **Search** — filters users by name or email (client-side, instant)
+- **Sorting** — click the **Name** or **Company** column header to sort ascending/descending
+- **User detail page** — click any row to navigate to a full profile showing contact info, address, and company details
+- **Keyboard accessible** — rows are focusable; press Enter to open a user
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React 19](https://react.dev/) + [Vite](https://vite.dev/) (using `@vitejs/plugin-react` with Babel)
+- [React Router v7](https://reactrouter.com/) for client-side routing
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Then open http://localhost:5173 in your browser.
+
+## Scripts
+
+| Command          | Description                        |
+| ---------------- | ---------------------------------- |
+| `npm run dev`    | Start the development server       |
+| `npm run build`  | Build for production (outputs dist)|
+| `npm run lint`   | Run ESLint                         |
+| `npm run preview`| Preview the production build       |
